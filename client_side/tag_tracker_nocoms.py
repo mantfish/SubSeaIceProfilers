@@ -42,6 +42,8 @@ dst = np.array([[-4.52580443e-01,  3.54693558e-01,  6.31975682e-04,  3.27884916e
 
 #cap = cv.VideoCapture(0)  # Opens the webcam
 cap = cv.VideoCapture("/dev/v4l/by-id/usb-GENERAL_GENERAL_WEBCAM-video-index0")  # Opens the webcam
+cap.set(cv.CAP_PROP_AUTO_EXPOSURE, 0.25)
+cap.set(cv.CAP_PROP_EXPOSURE,100)
 
 w, h = int(cap.get(cv.CAP_PROP_FRAME_WIDTH)), int(cap.get(cv.CAP_PROP_FRAME_HEIGHT))
 
